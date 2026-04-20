@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nqobile Sithole | Data Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f5f7fb;
+      color: #1f2937;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.7rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      background: white;
+      color: #1e3a8a;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: bold;
+      margin: 8px;
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .btn:hover {
+      background: #dbeafe;
+      transform: translateY(-2px);
+    }
+
+    nav {
+      background: #111827;
+      padding: 14px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 14px;
+      font-size: 0.95rem;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #93c5fd;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 0;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #1e3a8a;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .about, .skills, .contact {
+      background: white;
+      padding: 34px;
+      border-radius: 20px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      margin-bottom: 35px;
+    }
+
+    .about p, .contact p {
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .skill-box {
+      background: #eff6ff;
+      padding: 20px;
+      border-radius: 12px;
+      border-left: 5px solid #2563eb;
+    }
+
+    .skill-box h3 {
+      margin-bottom: 10px;
+      color: #1e3a8a;
+      font-size: 1.1rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e5e7eb;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
+    }
+
+    .project-card h3 {
+      color: #1e3a8a;
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+    }
+
+    .project-card p {
+      margin-bottom: 10px;
+      font-size: 0.96rem;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      border: 1px solid #d1d5db;
+      background: #f3f4f6;
+    }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .project-tagline {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: 0.88rem;
+      font-weight: bold;
+    }
+
+    .project-card ul {
+      padding-left: 18px;
+      margin-bottom: 12px;
+    }
+
+    .project-card li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .project-links {
+      margin-top: 15px;
+    }
+
+    .project-links a {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 10px 14px;
+      background: #dbeafe;
+      color: #1e3a8a;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 0.92rem;
+    }
+
+    .project-links a:hover {
+      background: #bfdbfe;
+    }
+
+    .project-card strong {
+      color: #111827;
+    }
+
+    .contact a {
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0f172a;
+      color: white;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+
+      .project-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="margin-bottom: 20px;">
+      <img src="images/profile.jpg" alt="Nqobile Sithole profile photo" style="width: 170px; height: 170px; object-fit: cover; border-radius: 50%; border: 5px solid white; box-shadow: 0 4px 18px rgba(0,0,0,0.2);" />
+    </div>
+    <h1>Nqobile Sithole</h1>
+    <p>Data Analyst | Aspiring Data Scientist | Statistics Graduate</p>
+    <p>Turning raw data into clear insights through analysis, dashboards, statistical thinking, and careful data cleaning.</p>
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="files/Nqobile_Sithole_CV.pdf" class="btn" target="_blank">Download CV</a>
+    <a href="#contact" class="btn">Contact Me</a>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>I am a BSc Data Science graduate majoring in Statistics and Computer Science from the University of KwaZulu-Natal. I enjoy working with data to solve problems, uncover patterns, and communicate findings in a clear and practical way.</p>
+      <p>My experience includes data cleaning, statistical analysis, dashboard development, and programming. I have worked on projects involving Power BI, SAS, Excel, SQL, Python, and C++. I am especially interested in data analysis, data science, and statistical programming roles where I can turn messy data into reliable insights.</p>
+      <p>I pay strong attention to detail and believe that good analysis starts with clean and accurate data. My work focuses not only on building reports, but also on understanding what the data is trying to say and how it can support better decisions.</p>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h3>Programming</h3>
+          <p>Python, SQL, C++, Java, HTML, CSS</p>
+        </div>
+        <div class="skill-box">
+          <h3>Data & Analytics</h3>
+          <p>Power BI, Power Query, SAS, Excel, Data Cleaning, Dashboarding</p>
+        </div>
+        <div class="skill-box">
+          <h3>Statistics</h3>
+          <p>Logistic Regression, Sampling, Hypothesis Testing, Model Diagnostics, Data Interpretation</p>
+        </div>
+        <div class="skill-box">
+          <h3>Professional Strengths</h3>
+          <p>Attention to Detail, Problem Solving, Communication, Independent Work, Accuracy</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+
+        <div class="project-card">
+          <div class="project-gallery">
+            <img src="images/powerbi-dashboard-1.jpg" alt="Sales Performance Dashboard screenshot 1" class="project-image" />
+            <img src="images/powerbi-dashboard-2.jpg" alt="Sales Performance Dashboard screenshot 2" class="project-image" />
+            <img src="images/powerbi-dashboard-3.jpg" alt="Sales Performance Dashboard screenshot 3" class="project-image" />
+            <img src="images/powerbi-dashboard-4.jpg" alt="Sales Performance Dashboard screenshot 4" class="project-image" />
+          </div>
+          <span class="project-tagline">Dashboarding • Data Cleaning • Business Insights</span>
+          <h3>Sales Performance Dashboard – Power BI</h3>
+          <p><strong>Objective:</strong> To develop an interactive game that combines storytelling, decision-making, and programming concepts in a functional application.</p>
+          <p><strong>How I Did It:</strong> Built the game using C++/CLI and WinForms with object-oriented programming concepts, templates, interactive forms, and resource tracking systems for player progress, fuel, and oxygen.</p>
+          <p><strong>How I Checked for Accuracy:</strong> I tested gameplay flow, verified score and progress tracking, checked that resource updates behaved correctly, and made sure the interface responded properly to user choices and chapter progression.</p>
+          <p><strong>What I Was Trying to Build:</strong> I wanted to create an engaging experience where the player survives on a dying Earth by making decisions, answering questions, and managing limited resources while searching for a habitable planet.</p>
+          <p><strong>What I Achieved:</strong> Developed a working interactive game with story progression, dynamic question handling, progress tracking, and visual resource management, which strengthened my programming and interface design skills.</p>
+          <p><strong>How It Helps:</strong> This project demonstrates problem-solving, user-centered design, and the ability to build complete systems with logic, structure, and interactive functionality.</p>
+          <p><strong>Tools:</strong> C++/CLI, WinForms, Object-Oriented Programming</p>
+          <div class="project-links">
+            <a href="files/ExtinctionProtocol.exe" target="_blank">Download Game</a>
+            <a href="https://github.com/yourusername/extinction-protocol" target="_blank">View Code</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:Jobenqobile3@gmail.com">Jobenqobile3@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nqobile-sithole-27207428a" target="_blank">View LinkedIn Profile</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Nqoubiler" target="_blank">View GitHub Profile</a></p>
+      <p><strong>Location:</strong> South Africa</p>
+      <p><strong>CV:</strong> <a href="files/Nqobile_Sithole_CV.pdf" target="_blank">Download My CV</a></p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Nqobile Sithole | Data Portfolio</p>
+  </footer>
+
+</body>
+</html>
