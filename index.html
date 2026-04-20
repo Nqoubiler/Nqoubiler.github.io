@@ -14,27 +14,51 @@
 
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #f5f7fb;
+      line-height: 1.7;
+      background: #f4f7fb;
       color: #1f2937;
+    }
+
+    a {
+      text-decoration: none;
     }
 
     header {
       background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
       color: white;
-      padding: 70px 20px;
+      padding: 70px 20px 55px;
       text-align: center;
     }
 
+    .profile-image {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      margin-bottom: 18px;
+    }
+
     header h1 {
-      font-size: 2.7rem;
+      font-size: 2.9rem;
       margin-bottom: 10px;
     }
 
-    header p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto 20px;
+    header .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    header .intro {
+      max-width: 850px;
+      margin: 0 auto 25px;
+      font-size: 1.02rem;
+    }
+
+    .hero-buttons {
+      margin-top: 10px;
     }
 
     .btn {
@@ -42,12 +66,11 @@
       padding: 12px 22px;
       background: white;
       color: #1e3a8a;
-      text-decoration: none;
       border-radius: 999px;
       font-weight: bold;
       margin: 8px;
       transition: 0.3s ease;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
     }
 
     .btn:hover {
@@ -57,18 +80,18 @@
 
     nav {
       background: #111827;
-      padding: 14px;
+      padding: 14px 10px;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
 
     nav a {
       color: white;
-      text-decoration: none;
       margin: 0 14px;
-      font-size: 0.95rem;
+      font-size: 0.96rem;
       font-weight: bold;
     }
 
@@ -77,104 +100,81 @@
     }
 
     .container {
-      width: 90%;
-      max-width: 1100px;
+      width: 92%;
+      max-width: 1180px;
       margin: auto;
-      padding: 50px 0;
+      padding: 45px 0;
+    }
+
+    section {
+      margin-bottom: 36px;
     }
 
     section h2 {
       font-size: 2rem;
-      color: #1e3a8a;
-      margin-bottom: 20px;
+      color: #1d4ed8;
       text-align: center;
+      margin-bottom: 22px;
     }
 
-    .about, .skills, .contact {
+    .card {
       background: white;
       padding: 34px;
-      border-radius: 20px;
+      border-radius: 22px;
       box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
-      margin-bottom: 35px;
+      border: 1px solid #e5e7eb;
     }
 
-    .about p, .contact p {
+    .about p,
+    .contact p {
+      margin-bottom: 14px;
       font-size: 1rem;
-      margin-bottom: 12px;
     }
 
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 15px;
     }
 
     .skill-box {
       background: #eff6ff;
-      padding: 20px;
-      border-radius: 12px;
+      padding: 22px;
+      border-radius: 16px;
       border-left: 5px solid #2563eb;
     }
 
     .skill-box h3 {
-      margin-bottom: 10px;
       color: #1e3a8a;
-      font-size: 1.1rem;
+      margin-bottom: 10px;
+      font-size: 1.08rem;
     }
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
+      grid-template-columns: 1fr;
+      gap: 28px;
     }
 
     .project-card {
       background: white;
-      padding: 25px;
-      border-radius: 20px;
+      padding: 28px;
+      border-radius: 22px;
       box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       border: 1px solid #e5e7eb;
+      transition: 0.3s ease;
     }
 
     .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
-    }
-
-    .project-card h3 {
-      color: #1e3a8a;
-      margin-bottom: 12px;
-      font-size: 1.2rem;
-    }
-
-    .project-card p {
-      margin-bottom: 10px;
-      font-size: 0.96rem;
-    }
-
-    .project-image {
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 12px;
-      border: 1px solid #d1d5db;
-      background: #f3f4f6;
-    }
-
-    .project-gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-bottom: 15px;
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
     }
 
     .project-tagline {
       display: inline-block;
       margin-bottom: 12px;
-      padding: 6px 12px;
+      padding: 7px 13px;
       border-radius: 999px;
       background: #eff6ff;
       color: #1d4ed8;
@@ -182,73 +182,95 @@
       font-weight: bold;
     }
 
-    .project-card ul {
-      padding-left: 18px;
-      margin-bottom: 12px;
-    }
-
-    .project-card li {
-      margin-bottom: 8px;
-      font-size: 0.95rem;
-    }
-
-    .project-links {
-      margin-top: 15px;
-    }
-
-    .project-links a {
-      display: inline-block;
-      margin-right: 10px;
-      margin-bottom: 10px;
-      padding: 10px 14px;
-      background: #dbeafe;
+    .project-card h3 {
       color: #1e3a8a;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 0.92rem;
+      margin-bottom: 14px;
+      font-size: 1.45rem;
     }
 
-    .project-links a:hover {
-      background: #bfdbfe;
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid #d1d5db;
+      background: #f3f4f6;
+    }
+
+    .project-card p {
+      margin-bottom: 10px;
+      font-size: 0.98rem;
     }
 
     .project-card strong {
       color: #111827;
     }
 
+    .project-links {
+      margin-top: 16px;
+    }
+
+    .project-links a {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      background: #dbeafe;
+      color: #1e3a8a;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 0.93rem;
+      transition: 0.3s ease;
+    }
+
+    .project-links a:hover {
+      background: #bfdbfe;
+    }
+
     .contact a {
       color: #1d4ed8;
-      text-decoration: none;
       font-weight: bold;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 22px;
       background: #0f172a;
       color: white;
       margin-top: 30px;
     }
 
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 8px;
-      }
-
+    @media (max-width: 900px) {
       .project-gallery {
         grid-template-columns: 1fr;
       }
     }
 
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.1rem;
+      }
+
       nav a {
         display: inline-block;
-        margin: 8px;
+        margin: 8px 8px;
+      }
+
+      .card,
+      .project-card {
+        padding: 22px;
+      }
+
+      .profile-image {
+        width: 145px;
+        height: 145px;
       }
     }
   </style>
@@ -256,15 +278,19 @@
 <body>
 
   <header>
-    <div style="margin-bottom: 20px;">
-      <img src="images/profile.jpg" alt="Nqobile Sithole profile photo" style="width: 170px; height: 170px; object-fit: cover; border-radius: 50%; border: 5px solid white; box-shadow: 0 4px 18px rgba(0,0,0,0.2);" />
-    </div>
+    <img src="images/profile.jpg" alt="Nqobile Sithole profile photo" class="profile-image" />
     <h1>Nqobile Sithole</h1>
-    <p>Data Analyst | Aspiring Data Scientist | Statistics Graduate</p>
-    <p>Turning raw data into clear insights through analysis, dashboards, statistical thinking, and careful data cleaning.</p>
-    <a href="#projects" class="btn">View Projects</a>
-    <a href="files/Nqobile_Sithole_CV.pdf" class="btn" target="_blank">Download CV</a>
-    <a href="#contact" class="btn">Contact Me</a>
+    <p class="subtitle">Data Analyst | Aspiring Data Scientist | Statistics Graduate</p>
+    <p class="intro">
+      I turn raw data into meaningful insights through data cleaning, statistical analysis, dashboard development, and problem-solving.
+      My portfolio showcases projects in Power BI, SAS, Excel, SQL, and C++ that reflect both technical ability and analytical thinking.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="files/Nqobile_Sithole_CV.pdf" class="btn" target="_blank">Download CV</a>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
   </header>
 
   <nav>
@@ -276,71 +302,201 @@
 
   <div class="container">
 
-    <section id="about" class="about">
-      <h2>About Me</h2>
-      <p>I am a BSc Data Science graduate majoring in Statistics and Computer Science from the University of KwaZulu-Natal. I enjoy working with data to solve problems, uncover patterns, and communicate findings in a clear and practical way.</p>
-      <p>My experience includes data cleaning, statistical analysis, dashboard development, and programming. I have worked on projects involving Power BI, SAS, Excel, SQL, Python, and C++. I am especially interested in data analysis, data science, and statistical programming roles where I can turn messy data into reliable insights.</p>
-      <p>I pay strong attention to detail and believe that good analysis starts with clean and accurate data. My work focuses not only on building reports, but also on understanding what the data is trying to say and how it can support better decisions.</p>
+    <section id="about">
+      <div class="card about">
+        <h2>About Me</h2>
+        <p>
+          I am a BSc Data Science graduate majoring in Statistics and Computer Science from the University of KwaZulu-Natal.
+          I enjoy using data to solve problems, uncover trends, and support better decision-making through clear reporting and analysis.
+        </p>
+        <p>
+          My work includes data cleaning, dashboard creation, statistical modelling, and interpreting results in a meaningful way.
+          I believe strong analysis starts with clean and reliable data, so I pay close attention to accuracy, consistency, and validation before drawing conclusions.
+        </p>
+        <p>
+          I am interested in Data Analyst, Data Scientist, and Statistical Programming roles where I can combine technical skills with analytical thinking to create practical value.
+        </p>
+      </div>
     </section>
 
-    <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-box">
-          <h3>Programming</h3>
-          <p>Python, SQL, C++, Java, HTML, CSS</p>
-        </div>
-        <div class="skill-box">
-          <h3>Data & Analytics</h3>
-          <p>Power BI, Power Query, SAS, Excel, Data Cleaning, Dashboarding</p>
-        </div>
-        <div class="skill-box">
-          <h3>Statistics</h3>
-          <p>Logistic Regression, Sampling, Hypothesis Testing, Model Diagnostics, Data Interpretation</p>
-        </div>
-        <div class="skill-box">
-          <h3>Professional Strengths</h3>
-          <p>Attention to Detail, Problem Solving, Communication, Independent Work, Accuracy</p>
+    <section id="skills">
+      <div class="card">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-box">
+            <h3>Programming</h3>
+            <p>Python, SQL, C++, Java, HTML, CSS</p>
+          </div>
+
+          <div class="skill-box">
+            <h3>Data Tools</h3>
+            <p>Power BI, Power Query, Excel, SAS, GitHub</p>
+          </div>
+
+          <div class="skill-box">
+            <h3>Statistics & Analysis</h3>
+            <p>Logistic Regression, Sampling, Hypothesis Testing, Model Diagnostics, Data Interpretation</p>
+          </div>
+
+          <div class="skill-box">
+            <h3>Professional Strengths</h3>
+            <p>Attention to Detail, Accuracy Checking, Problem Solving, Communication, Independent Work</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
+
       <div class="projects">
 
+        <!-- PROJECT 1 -->
         <div class="project-card">
-          <div class="project-gallery">
-            <img src="images/powerbi-dashboard-1.jpg" alt="Sales Performance Dashboard screenshot 1" class="project-image" />
-            <img src="images/powerbi-dashboard-2.jpg" alt="Sales Performance Dashboard screenshot 2" class="project-image" />
-            <img src="images/powerbi-dashboard-3.jpg" alt="Sales Performance Dashboard screenshot 3" class="project-image" />
-            <img src="images/powerbi-dashboard-4.jpg" alt="Sales Performance Dashboard screenshot 4" class="project-image" />
-          </div>
-          <span class="project-tagline">Dashboarding • Data Cleaning • Business Insights</span>
+          <span class="project-tagline">Power BI • Dashboarding • Data Cleaning</span>
           <h3>Sales Performance Dashboard – Power BI</h3>
-          <p><strong>Objective:</strong> To develop an interactive game that combines storytelling, decision-making, and programming concepts in a functional application.</p>
-          <p><strong>How I Did It:</strong> Built the game using C++/CLI and WinForms with object-oriented programming concepts, templates, interactive forms, and resource tracking systems for player progress, fuel, and oxygen.</p>
-          <p><strong>How I Checked for Accuracy:</strong> I tested gameplay flow, verified score and progress tracking, checked that resource updates behaved correctly, and made sure the interface responded properly to user choices and chapter progression.</p>
-          <p><strong>What I Was Trying to Build:</strong> I wanted to create an engaging experience where the player survives on a dying Earth by making decisions, answering questions, and managing limited resources while searching for a habitable planet.</p>
-          <p><strong>What I Achieved:</strong> Developed a working interactive game with story progression, dynamic question handling, progress tracking, and visual resource management, which strengthened my programming and interface design skills.</p>
-          <p><strong>How It Helps:</strong> This project demonstrates problem-solving, user-centered design, and the ability to build complete systems with logic, structure, and interactive functionality.</p>
-          <p><strong>Tools:</strong> C++/CLI, WinForms, Object-Oriented Programming</p>
+
+          <div class="project-gallery">
+            <img src="images/powerbi-dashboard-1.jpg" alt="Power BI dashboard screenshot 1" class="project-image" />
+            <img src="images/powerbi-dashboard-2.jpg" alt="Power BI dashboard screenshot 2" class="project-image" />
+            <img src="images/powerbi-dashboard-3.jpg" alt="Power BI dashboard screenshot 3" class="project-image" />
+            <img src="images/powerbi-dashboard-4.jpg" alt="Power BI dashboard screenshot 4" class="project-image" />
+          </div>
+
+          <p><strong>Objective:</strong> To analyse sales data and identify important trends in revenue, monthly performance, category contribution, and profit-related patterns that could support better business planning.</p>
+
+          <p><strong>Data Cleaning:</strong> I used Power Query to clean and prepare the data before analysis. This included checking and correcting data types, reviewing blanks and errors, standardising date fields, and making sure the dataset was structured correctly for reporting.</p>
+
+          <p><strong>How I Did It:</strong> I built an interactive dashboard in Power BI using KPI cards, bar charts, line charts, and slicers. I also used DAX and Power Query to support calculations and transform the raw data into a format suitable for analysis.</p>
+
+          <p><strong>How I Checked for Accuracy:</strong> I compared dashboard totals with the source dataset, checked that calculations matched expected values, reviewed filters and slicers for consistency, and made sure the trends shown in the visuals aligned with the underlying data tables.</p>
+
+          <p><strong>What I Was Trying to Find:</strong> I wanted to understand which months performed best, whether there were seasonal patterns, which categories were strongest, and where the business might have opportunities to improve performance.</p>
+
+          <p><strong>What I Found:</strong> December showed peak sales while January and February dropped after the holiday period, indicating seasonality in demand. I also observed differences in category performance and monthly trends, which could help guide promotional timing and stock planning.</p>
+
+          <p><strong>How It Helps:</strong> Dashboards like this help businesses monitor performance quickly, identify underperforming periods, and make more informed decisions about marketing, inventory, and strategy.</p>
+
+          <p><strong>Tools Used:</strong> Power BI, Power Query, DAX, Excel</p>
+
+          <div class="project-links">
+            <a href="https://your-dashboard-link-here.com" target="_blank">View Dashboard</a>
+            <a href="https://github.com/Nqoubiler" target="_blank">View GitHub</a>
+          </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card">
+          <span class="project-tagline">SAS • Biostatistics • Logistic Regression</span>
+          <h3>Cardiovascular Disease Risk Analysis – SAS</h3>
+
+          <div class="project-gallery">
+            <img src="images/cvd-project-1.jpg" alt="Cardiovascular disease project screenshot 1" class="project-image" />
+            <img src="images/cvd-project-2.jpg" alt="Cardiovascular disease project screenshot 2" class="project-image" />
+            <img src="images/cvd-project-3.jpg" alt="Cardiovascular disease project screenshot 3" class="project-image" />
+            <img src="images/cvd-project-4.jpg" alt="Cardiovascular disease project screenshot 4" class="project-image" />
+          </div>
+
+          <p><strong>Objective:</strong> To identify factors associated with cardiovascular disease and determine which variables significantly contributed to a higher likelihood of the event of interest occurring.</p>
+
+          <p><strong>Data Cleaning:</strong> I reviewed the structure of the data, checked variable formats, prepared categorical and quantitative variables appropriately, and ensured the dataset was suitable for valid statistical analysis before modelling.</p>
+
+          <p><strong>How I Did It:</strong> I started by examining one-way summaries and selecting relevant explanatory variables. I then performed chi-square tests of association on relevant categorical variables and fitted a logistic regression model that included both categorical and quantitative predictors. After that, I reduced the model by removing non-significant variables and selected the final model using model comparison criteria.</p>
+
+          <p><strong>How I Checked for Accuracy:</strong> I compared results from the tests of association with the logistic regression findings, performed a goodness-of-fit assessment, checked for overdispersion, and reviewed influential observations to make sure the final model was statistically reliable and appropriately fitted to the data.</p>
+
+          <p><strong>What I Was Trying to Find:</strong> I wanted to determine which risk factors significantly increased the likelihood of cardiovascular disease and identify the model that best explained the response variable.</p>
+
+          <p><strong>What I Found:</strong> The final model identified age, serum sodium, and ejection fraction as significant predictors. This showed that both physiological and demographic variables played an important role in understanding cardiovascular risk.</p>
+
+          <p><strong>How It Helps the World:</strong> This type of analysis can support evidence-based healthcare by helping researchers and health professionals identify higher-risk patients earlier and focus attention on the most meaningful predictors of disease.</p>
+
+          <p><strong>Tools Used:</strong> SAS, Logistic Regression, Chi-Square Testing, Model Diagnostics</p>
+
+          <div class="project-links">
+            <a href="images/cvd-project-1.jpg" target="_blank">View Screenshot</a>
+            <a href="https://github.com/Nqoubiler" target="_blank">View GitHub</a>
+          </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card">
+          <span class="project-tagline">Sampling • Socio-economic Analysis • SAS</span>
+          <h3>General Household Survey Sampling Project</h3>
+
+          <div class="project-gallery">
+            <img src="images/sampling-project-1.jpg" alt="Household survey project screenshot 1" class="project-image" />
+            <img src="images/sampling-project-2.jpg" alt="Household survey project screenshot 2" class="project-image" />
+            <img src="images/sampling-project-3.jpg" alt="Household survey project screenshot 3" class="project-image" />
+            <img src="images/sampling-project-4.jpg" alt="Household survey project screenshot 4" class="project-image" />
+          </div>
+
+          <p><strong>Objective:</strong> To estimate the average monthly salary of households in South Africa, the proportion of households earning below the R4500 threshold, and the total monthly salary generated by households whose main source of income is salary.</p>
+
+          <p><strong>Data Cleaning:</strong> I cleaned the data by removing unrealistic zero values in household monthly salary, removing non-response observations, and using the “Main income source” variable to focus only on households where salary was the main source of income. This improved the quality and relevance of the analysis.</p>
+
+          <p><strong>How I Did It:</strong> I compared four sampling methods: Simple Random Sampling Without Replacement, Simple Random Sampling With Replacement, Stratified Sampling, and Cluster Sampling. I used these methods to estimate the three population parameters of interest and compare their performance.</p>
+
+          <p><strong>How I Checked for Accuracy:</strong> I evaluated the precision of each method by comparing confidence intervals for the mean, total, and proportion estimates. The method with the narrower confidence intervals was considered more precise and more reliable for inference.</p>
+
+          <p><strong>What I Was Trying to Find:</strong> I wanted to determine which sampling method produced the most precise estimates and to better understand income patterns among households in South Africa.</p>
+
+          <p><strong>What I Found:</strong> Stratified sampling produced the narrowest confidence intervals and emerged as the most effective method. This showed that it provided more precise estimates for average monthly salary, total monthly salary, and the proportion of households earning below the threshold.</p>
+
+          <p><strong>How It Helps the World:</strong> These findings can support governments, economists, and policy makers by providing insight into income levels, poverty-related vulnerability, and possible tax expectations. This can help guide social support planning and economic policy decisions.</p>
+
+          <p><strong>Tools Used:</strong> SAS, Sampling Methods, Confidence Intervals, Statistical Inference</p>
+
+          <div class="project-links">
+            <a href="images/sampling-project-1.jpg" target="_blank">View Screenshot</a>
+            <a href="https://github.com/Nqoubiler" target="_blank">View GitHub</a>
+          </div>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="project-card">
+          <span class="project-tagline">C++ • WinForms • Interactive Development</span>
+          <h3>Extinction Protocol – C++ Interactive Game</h3>
+
+          <div class="project-gallery">
+            <img src="images/extinction-protocol-1.jpg" alt="Extinction Protocol screenshot 1" class="project-image" />
+            <img src="images/extinction-protocol-2.jpg" alt="Extinction Protocol screenshot 2" class="project-image" />
+            <img src="images/extinction-protocol-3.jpg" alt="Extinction Protocol screenshot 3" class="project-image" />
+            <img src="images/extinction-protocol-4.jpg" alt="Extinction Protocol screenshot 4" class="project-image" />
+          </div>
+
+          <p><strong>Objective:</strong> To build an interactive game that combines storytelling, decision-making, and programming logic in a complete working application.</p>
+
+          <p><strong>How I Did It:</strong> I developed the game using C++/CLI and WinForms, applying object-oriented programming concepts, templates, interactive forms, and resource tracking systems. The game includes story progression, question handling, and management of resources such as fuel and oxygen.</p>
+
+          <p><strong>How I Checked for Accuracy:</strong> I tested the gameplay flow, checked that progress and resource values updated correctly, reviewed the behaviour of different game features, and made sure the interface responded properly to user choices and chapter progression.</p>
+
+          <p><strong>What I Was Trying to Build:</strong> I wanted to create a story-driven survival game where the player must make decisions, answer questions, and manage limited resources while searching for a habitable planet as Earth is being destroyed.</p>
+
+          <p><strong>What I Achieved:</strong> I successfully built a working interactive game with multiple features, including dynamic story progression, question randomisation, scoring, and visual resource management. This strengthened my skills in programming, interface design, and problem-solving.</p>
+
+          <p><strong>How It Helps:</strong> This project demonstrates my ability to build a full system from idea to implementation, showing logic design, user interaction, and technical creativity in action.</p>
+
+          <p><strong>Tools Used:</strong> C++/CLI, WinForms, Object-Oriented Programming, Templates</p>
+
           <div class="project-links">
             <a href="files/ExtinctionProtocol.exe" target="_blank">Download Game</a>
-            <a href="https://github.com/yourusername/extinction-protocol" target="_blank">View Code</a>
+            <a href="https://github.com/Nqoubiler" target="_blank">View Code</a>
           </div>
         </div>
 
       </div>
     </section>
 
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:Jobenqobile3@gmail.com">Jobenqobile3@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nqobile-sithole-27207428a" target="_blank">View LinkedIn Profile</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/Nqoubiler" target="_blank">View GitHub Profile</a></p>
-      <p><strong>Location:</strong> South Africa</p>
-      <p><strong>CV:</strong> <a href="files/Nqobile_Sithole_CV.pdf" target="_blank">Download My CV</a></p>
+    <section id="contact">
+      <div class="card contact">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:Jobenqobile3@gmail.com">Jobenqobile3@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nqobile-sithole-27207428a" target="_blank">View LinkedIn Profile</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Nqoubiler" target="_blank">View GitHub Profile</a></p>
+        <p><strong>Location:</strong> South Africa</p>
+        <p><strong>CV:</strong> <a href="files/Nqobile_Sithole_CV.pdf" target="_blank">Download My CV</a></p>
+      </div>
     </section>
 
   </div>
